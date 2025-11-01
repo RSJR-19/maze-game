@@ -1,0 +1,280 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: white;
+    letter-spacing: 5px;
+    
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: black;
+}
+
+
+
+#game-box{
+    height: 400px;
+    width: 800px;
+    background-color: black;
+    position: relative;
+    border-radius: 20px;
+    display: flex;
+}
+.level{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border-radius: 13px;
+    display: none;
+}
+#level-1{
+    display:none;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+}
+#level-2{
+    display: none;
+    background-color:black;
+    height: 100%;
+    width: 100%;
+}
+#level-3{
+    display: none;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+}
+
+.side-A{
+    background-color: black;
+    width: 20%;
+    border-radius: 20px 0 0 20px;
+    border: 5px solid gray;
+}
+.side-B{
+    background-color: black;
+    width: 20%;
+    border-radius: 0px 20px 20px 0;
+    border: 5px solid gray;
+}
+.screen{
+    height: 100%;
+    width: 60%;
+    background-color: white;
+    position: relative;
+    display: flex;
+    
+
+}
+
+
+#wall1A{
+    background-color: blue;
+    height: 400px;
+    width: 100px;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+#wall2A{
+    background-color: blue;
+    height: 400px;
+    width: 100px;
+    top: 0px;
+    left: 380px;
+    position: absolute;
+
+}
+
+#wall3A{
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 480px;
+    height: 50px;
+    position: absolute;
+    top: 350px;
+    left: 0;
+
+}
+#finishA{
+    background-color: yellow;
+    width: 280px;
+    height: 25px;
+    position: absolute;
+    left: 100px;
+    top: 0;
+}
+
+#player{
+    background-color: red;
+    display: flex;
+    height: 35px;
+    width: 35px ;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 305px;   
+    left: 220px;
+    margin: 0;
+    padding: 0;
+}
+
+#wall1B{
+    background-color: blue;
+    height: 50px;
+    width: 480px;
+    position: absolute;
+    top: 350px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#wall2B{
+    background-color: blue;
+    height: 280px;
+    width: 350px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+#wall3B{
+    background-color: blue;
+    height:350px ;
+    width: 50px;
+    position: absolute;
+    left: 430px;
+    top: 0;
+}
+
+#wall4B{
+    background-color: blue;
+    height: 70px;
+    width: 50px;
+    position: absolute;
+    top: 280px;
+    left: 0;
+}
+
+
+#finishB{
+    background-color: yellow;
+    height: 25px;
+    width: 80px;
+    position: absolute;
+    top: 0;
+    left: 350px;
+}
+
+#wall1C{
+    background-color: blue;
+    height: 400px;
+    width: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#wall2C{
+    background-color: blue;
+    height:40px ;
+    width: 360px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#wall3C{
+    background-color: blue;
+    position: absolute;
+    height: 40px ;
+    width: 480px;
+    top: 360px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#wall4C{
+    background-color: blue;
+    position: absolute;
+    height: 400px;
+    width: 40px;
+    top: 0;
+    left: 440px;
+}
+#wall5C{
+    background-color: blue;
+    position: absolute;
+    height: 300px;
+    width: 40px;
+    top: 100px;
+    left: 100px;
+}
+
+#wall6C{
+    background-color: blue;
+    position: absolute;
+    height: 300px;
+    width: 40px;
+    top: 0;
+    left: 220px;
+}
+#wall7C{
+    background-color: blue;
+    position: absolute;
+    height: 40px;
+    width: 150px;
+    top: 260px;
+    left: 220px;
+}
+
+#wall8C{
+    background-color:blue;
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    top: 90px;
+    left: 320px;
+}
+
+
+#finishC{
+    background-color: yellow;
+    height: 20px;
+    width: 80px;
+    position:absolute;
+    top: 0;
+    left: 360px;
+}
+#vid-frame{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0.14);
+    border-radius: 20px;
+    z-index:9999;
+}
+
+video{
+    height: 600px;
+    width: 800px;
+   
+}
