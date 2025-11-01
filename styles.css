@@ -7,27 +7,7 @@
     
 }
 
-#small-screen{
-    display: none;
-    background-color: black;
-    height: 100dvh;
-    width: 100dvh;
-    position: absolute;
-    justify-content: center;
-    
 
-
-}
-
-@media (max-width:850px) {
-    #game-box{
-        display: none;
-    }
-    #small-screen{
-        display: flex;
-    }
-    
-}
 
 html{
     font-size: 16px;
