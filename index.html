@@ -7,8 +7,15 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <audio src="Monplaisir - Soundtrack  NO COPYRIGHT 8-bit Music.mp3" muted loop id="music"></audio>
     <main id="game-box">
-        <div class="side-A" id="sideA"></div>
+        <div class="side-A" id="sideA">
+            <button id="left-btn">LEFT</button>
+            <button id="right-btn">RIGHT</button>
+            <button id="up-btn">UP</button>
+            <button id="down-btn">DOWN</button>
+            
+        </div>
         <div class="screen" id="screen">
             <section id="level-1">
                 <div id="wall1A" class="wall"></div>
@@ -46,12 +53,19 @@
                     <div></div>
                 </div>
         </div>
-        <div class="side-B" id="sideB"></div>
+        <div class="side-B" id="sideB">
+            <h1 style="text-align: center;">RSJR.</h1>
+            <h1 style="text-align: center;">MINI</h1>
+            <h1 style="text-align: center;">MAZE</h1>
+        </div>
         <div id="vid-frame">
             <video src="Jumpsker.mp4" id="video" playsinline muted loop autoplay> </video>
         </div>
 
     </main>
+    <div id="small-screen">
+        <h1 style="text-align: center; color: white;">Try switching to Desktop Mode or playing In landscape orientation</h1>
+    </div>
 
     
 

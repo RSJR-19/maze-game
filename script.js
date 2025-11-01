@@ -6,8 +6,11 @@ const sideB = document.getElementById('sideB');
 const screen = document.getElementById('screen');
 const video = document.getElementById('video');
 const vidFrame = document.getElementById('vid-frame');
+const music = document.getElementById('music');
 
 let videoPlaying = false;
+
+document.addEventListener("contextmenu", e => e.preventDefault());
 
 const player = document.getElementById('player');
 let walls = [{x : 0, y: 0, width: 100, height: 400},
@@ -124,6 +127,7 @@ function movePlayer(moveX, moveY){
                     sideB.style.opacity = 0;
                     screen.style.opacity = 0;
 
+                    music.pause()
                     vidFrame.style.display = "flex";
                     video.currentTime = 0;
                     video.muted = false;
@@ -144,4 +148,43 @@ document.addEventListener('keydown', event=>{
     if (event.key === "ArrowDown"){ movePlayer(0, speed)};
 })
 
+let btnHolding;
 
+function holdStart(direction){
+    clearInterval(btnHolding);
+    moveTowards(direction);
+    btnHolding = setInterval(() =>moveTowards(direction), 100)
+}
+
+function holdStop(){
+    clearInterval(btnHolding);
+}
+
+function moveTowards(dir){
+    if (dir === "left") movePlayer(-speed, 0);
+    if (dir === "right") movePlayer(speed, 0);
+    if (dir === "up") movePlayer(0, -speed);
+    if (dir === "down") movePlayer(0, speed);
+}
+
+["left", "right", "up", "down"].forEach(dir => {
+  const btn = document.getElementById(`${dir}-btn`);
+  btn.onmousedown = () => holdStart(dir);
+  btn.onmouseup = holdStop;
+  btn.onmouseleave = holdStop;
+  btn.ontouchstart = () => holdStart(dir);
+  btn.ontouchend = holdStop;
+});
+
+let isMusicPlaying = false;
+
+function playMusic(){
+    if (!isMusicPlaying){
+        music.currentTime = 0;
+        music.muted = false;
+        music.play()
+        isMusicPlaying = true;
+    }}
+
+document.addEventListener('click', playMusic);
+document.addEventListener('keydown', playMusic);
