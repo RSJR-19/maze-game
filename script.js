@@ -69,10 +69,7 @@ function backStart(){
 
     }
 
-
-
     }
-
 
 function checkFinish(playerPosition, finishA){
     if (playerPosition.x < finishA.x + finishA.width &&
@@ -97,7 +94,6 @@ function checkFinish(playerPosition, finishA){
  function checkWall(playerPosition, walls){
     return walls.some(wall => checkCollision(playerPosition, wall));
  }
-
 
 
 function movePlayer(moveX, moveY){
